@@ -1,4 +1,3 @@
-// Elementos
 const entrada = document.getElementById("entrada");
 const guardarBtn = document.getElementById("guardarBtn");
 const lista = document.getElementById("lista");
@@ -6,23 +5,19 @@ const bonusBar = document.getElementById("bonusBar");
 const bonusText = document.getElementById("bonusText");
 const starsDiv = document.getElementById("stars");
 
-// Datos guardados
 let datos = JSON.parse(localStorage.getItem("misDatos")) || [];
 let puntos = Number(localStorage.getItem("misPuntos")) || 0;
 let estrellas = JSON.parse(localStorage.getItem("misEstrellas")) || [];
 
-// ⚡ Si los puntos están en 100 o más → reiniciar a 0
 if (puntos >= 100) {
   puntos = 0;
   localStorage.setItem("misPuntos", String(puntos));
 }
 
-// Mostrar UI inicial
 actualizarBonusUI();
 mostrarLista();
 mostrarEstrellas();
 
-// Guardar tarea
 guardarBtn.addEventListener("click", () => {
   const text = entrada.value.trim();
   if (text === "") return;
@@ -32,12 +27,10 @@ guardarBtn.addEventListener("click", () => {
   mostrarLista();
 });
 
-// Enter también guarda
 entrada.addEventListener("keydown", (e) => {
   if (e.key === "Enter") guardarBtn.click();
 });
 
-// Mostrar lista con botones
 function mostrarLista() {
   lista.innerHTML = "";
   datos.forEach((item, index) => {
