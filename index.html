@@ -1,119 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
   <title>Con mi ayuda</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f7f9fc;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 { color: #333; }
-
-    #controls {
-      margin: 15px 0;
-    }
-
-    input {
-      padding: 8px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      width: 200px;
-    }
-
-    button {
-      padding: 8px 10px;
-      border-radius: 6px;
-      border: none;
-      background: #4caf50;
-      color: white;
-      cursor: pointer;
-      margin-left: 6px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      max-width: 400px;
-      margin: 10px auto;
-      text-align: left;
-    }
-
-    li {
-      background: white;
-      margin: 6px 0;
-      padding: 10px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border: 1px solid #ddd;
-    }
-
-    li span {
-      flex: 1;
-      margin-right: 10px;
-    }
-
-    li button {
-      background: #1976d2;
-      padding: 6px 8px;
-      border-radius: 6px;
-      color: white;
-    }
-
-    #bonusSection {
-      margin-top: 20px;
-    }
-
-    #bonusSection .barOuter {
-      width: 80%;
-      margin: auto;
-      background: #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      height: 30px;
-    }
-
-    #bonusBar {
-      width: 0%;
-      height: 100%;
-      background: #4caf50;
-      transition: width .4s;
-    }
-
-    #stars {
-      margin-top: 15px;
-    }
-  </style>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>Tú puedes!</h1>
-
-  <div id="controls">
-    <input id="entrada" placeholder="Escribe una tarea..." />
-    <button id="guardarBtn" type="button">Guardar</button>
+  <h1>Let's play!</h1>
+  
+  <div id="scrambled">---</div>
+  
+  <input type="text" id="answer" placeholder="Escribe el verbo correcto">
+  <button id="checkBtn">Check</button>
+  
+  <div class="progress-container">
+    <div id="progress" class="progress-bar"></div>
   </div>
-
-  <ul id="lista"></ul>
-
-  <div id="bonusSection">
-    <h2>^u^!!</h2>
-    <div class="barOuter">
-      <div id="bonusBar"></div>
-    </div>
-    <p id="bonusText">0 / 100 puntos</p>
-    <div id="stars"></div>
-  </div>
-
-  <script src="script.js"></script>
-
+  
+  <h2>Look! A star! >u<</h2>
+  <div id="stars"></div>
+  
+  <script src="./index.js"></script>
 </body>
-</html>
-
 </html>

@@ -1,30 +1,36 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f9f9f9;
   text-align: center;
-  padding: 20px;
+  background: #f0f8ff;
+  margin: 0;
+  padding: 30px;
 }
 
-input {
-  padding: 10px;
-  width: 200px;
+#scrambled {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #00509e;
 }
 
-button {
-  padding: 10px;
-  margin-left: 5px;
-  background-color: #ff91a4;
-  color: white;
-  border: none;
-  cursor: pointer;
+.progress-container {
+  width: 80%;
+  height: 30px;
+  background: #ddd;
+  border-radius: 15px;
+  margin: 20px auto;
+  overflow: hidden;
 }
 
-button:hover {
-  background-color: #ff6f91;
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #4caf50;
+  transition: width 0.3s;
 }
 
-ul {
-  margin-top: 20px;
-  list-style: none;
-  padding: 0;
+#stars {
+  font-size: 30px;
+  margin-top: 15px;
+  color: gold;
 }
